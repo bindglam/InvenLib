@@ -1,0 +1,4 @@
+name: InvenLib
+main: com.github.octglam.invenlib.InvenLib
+version: 1.0
+api-version: 1.12
