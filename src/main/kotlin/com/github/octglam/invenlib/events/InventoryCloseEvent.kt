@@ -13,9 +13,9 @@ class InventoryCloseEvent : Listener {
         for(inv: Inventory in InvenLib.inventories){
             if(event.inventory == inv){
                 if(InvenLib.inventoryIsNotClose[inv] == true){
-                    Bukkit.getServer().scheduler.runTask(InvenLib.instance) {
+                    Bukkit.getServer().scheduler.runTask(InvenLib.instance, Runnable {
                         event.player.openInventory(inv)
-                    }
+                    })
                 }
             }
         }

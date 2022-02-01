@@ -46,7 +46,7 @@ class InvenLib : JavaPlugin(), Listener {
         fun setInvItem(name: String, mat: Material, lore: List<String>, amount: Int, slot: Int, inventory: Inventory){
             val item = ItemStack(mat, amount)
             val meta = item.itemMeta
-            meta.displayName = name
+            meta.setDisplayName(name)
             meta.lore = lore
             item.itemMeta = meta
             inventory.setItem(slot, item)
@@ -59,7 +59,7 @@ class InvenLib : JavaPlugin(), Listener {
         fun addInvItem(name: String, mat: Material, lore: List<String>, amount: Int, inventory: Inventory){
             val item = ItemStack(mat, amount)
             val meta = item.itemMeta
-            meta.displayName = name
+            meta.setDisplayName(name)
             meta.lore = lore
             item.itemMeta = meta
             inventory.addItem(item)
@@ -72,7 +72,7 @@ class InvenLib : JavaPlugin(), Listener {
         fun createItem(name: String, mat: Material, lore: List<String>, amount: Int): ItemStack{
             val item = ItemStack(mat, amount)
             val meta = item.itemMeta
-            meta.displayName = name
+            meta.setDisplayName(name)
             meta.lore = lore
             item.itemMeta = meta
             return item
